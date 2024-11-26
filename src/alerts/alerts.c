@@ -7,7 +7,7 @@ void send_alert(char *title, char *body)
 {
   // Construct the AppleScript command to trigger the notification
   char command[512];
-  snprintf(command, sizeof(command), "osascript -e 'display notification \"%s\" with title \"%s\"'", title, body);
+  snprintf(command, sizeof(command), "osascript -e 'display notification \"%s\" with title \"%s\"'", body, title);
 
   // Execute the AppleScript command
   system(command);
